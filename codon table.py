@@ -1,6 +1,6 @@
-# ============================================================
+
 # CODON TABLE GENERATOR
-# ============================================================
+
 # Project:
 # Development of a Codon Table Generator
 #
@@ -16,13 +16,13 @@
 # 8. Handles incomplete codons.
 # 9. Displays the complete codon table.
 #
-# Author: Your Name
-# ============================================================
+# Author: Abhinand PV
 
 
-# ============================================================
+
+
 # 1. STANDARD GENETIC CODE
-# ============================================================
+
 
 codon_table = {
 
