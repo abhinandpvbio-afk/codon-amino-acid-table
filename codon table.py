@@ -345,7 +345,7 @@ def display_start_stop(codons):
 
     if len(start_positions) > 0:
 
-        print("\nStart Codon: AUG")
+        print(f"\nStart Codon: {START_CODON}")
 
         print("Found at codon position(s):", end=" ")
 
@@ -357,7 +357,7 @@ def display_start_stop(codons):
 
     else:
 
-        print("\nStart Codon: AUG")
+        print(f"\nStart Codon: {START_CODON}")
 
         print("No start codon found.")
 
