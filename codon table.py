@@ -213,7 +213,19 @@ def divide_into_codons(sequence):
 
 
 # ============================================================
-# 7. TRANSLATE CODONS
+# 7. CALCULATE GC CONTENT
+# ============================================================
+
+def calculate_gc_content(sequence):
+    """Return the percentage of bases that are G or C."""
+    if not sequence:
+        return 0.0
+    gc_count = sequence.count("G") + sequence.count("C")
+    return (gc_count / len(sequence)) * 100
+
+
+# ============================================================
+# 8. TRANSLATE CODONS
 # ============================================================
 
 def translate_codons(codons):
@@ -230,7 +242,7 @@ def translate_codons(codons):
 
 
 # ============================================================
-# 8. FIND START CODONS
+# 9. FIND START CODONS
 # ============================================================
 
 def find_start_codons(codons):
@@ -247,7 +259,7 @@ def find_start_codons(codons):
 
 
 # ============================================================
-# 9. FIND STOP CODONS
+# 10. FIND STOP CODONS
 # ============================================================
 
 def find_stop_codons(codons):
@@ -264,7 +276,7 @@ def find_stop_codons(codons):
 
 
 # ============================================================
-# 10. DISPLAY TRANSLATION RESULT
+# 11. DISPLAY TRANSLATION RESULT
 # ============================================================
 
 def display_translation(
@@ -313,7 +325,7 @@ def display_translation(
 
 
 # ============================================================
-# 11. DISPLAY START AND STOP CODONS
+# 12. DISPLAY START AND STOP CODONS
 # ============================================================
 
 def display_start_stop(codons):
@@ -365,7 +377,7 @@ def display_start_stop(codons):
 
 
 # ============================================================
-# 12. MAIN PROGRAM
+# 13. MAIN PROGRAM
 # ============================================================
 
 def main():
@@ -527,7 +539,7 @@ def main():
 
 
 # ============================================================
-# 13. RUN MAIN PROGRAM
+# 14. RUN MAIN PROGRAM
 # ============================================================
 
 if __name__ == "__main__":
