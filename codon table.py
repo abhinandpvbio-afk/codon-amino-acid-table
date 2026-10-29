@@ -318,6 +318,9 @@ def display_translation(
 
     print("\n")
 
+    if not codons:
+        print("No complete codons were found in the sequence.")
+
     print(f"{'No.':<8} {'Codon':<10} {'Amino Acid':<30}")
     print("-" * 75)
 
