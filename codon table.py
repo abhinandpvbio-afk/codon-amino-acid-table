@@ -297,6 +297,8 @@ def display_translation(
 
     print("\nRNA Sequence:")
     print(rna_sequence)
+    print(f"\nSequence length: {len(rna_sequence)} nucleotides")
+    print(f"GC content: {calculate_gc_content(rna_sequence):.2f}%")
 
     print("\nCodons:")
     print(" - ".join(codons))
