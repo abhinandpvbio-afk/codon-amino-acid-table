@@ -424,9 +424,9 @@ def main():
     # Get sequence from user
     # --------------------------------------------------------
 
-    sequence = input(
-        f"\nEnter your {sequence_type} sequence: "
-    ).strip().upper()
+    sequence = "".join(
+        input(f"\nEnter your {sequence_type} sequence: ").split()
+    ).upper()
 
     # --------------------------------------------------------
     # Check empty sequence
