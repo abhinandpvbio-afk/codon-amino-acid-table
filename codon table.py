@@ -123,6 +123,9 @@ codon_table = {
     "GGG": "Glycine"
 }
 
+START_CODON = "AUG"
+STOP_CODONS = {"UAA", "UAG", "UGA"}
+
 
 # ============================================================
 # 2. DISPLAY CODON TABLE
@@ -140,10 +143,10 @@ def display_codon_table():
 
     for codon, amino_acid in codon_table.items():
 
-        if codon == "AUG":
+        if codon == START_CODON:
             codon_type = "START"
 
-        elif codon in ["UAA", "UAG", "UGA"]:
+        elif codon in STOP_CODONS:
             codon_type = "STOP"
 
         else:
@@ -248,7 +251,7 @@ def find_start_codons(codons):
 
     for i, codon in enumerate(codons):
 
-        if codon == "AUG":
+        if codon == START_CODON:
 
             start_positions.append(i + 1)
 
@@ -265,7 +268,7 @@ def find_stop_codons(codons):
 
     for i, codon in enumerate(codons):
 
-        if codon in ["UAA", "UAG", "UGA"]:
+        if codon in STOP_CODONS:
 
             stop_positions.append((i + 1, codon))
 
