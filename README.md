@@ -79,9 +79,17 @@ The program also prints the codon positions, the translated amino-acid sequence,
 | `count_amino_acids(amino_acids)` | Counts each translated label. |
 | `display_codon_table()` | Prints the complete codon dictionary. |
 
-## Testing checklist
+## Tests
 
-Try these cases manually:
+Run the automated unit tests from the project folder:
+
+```bash
+python -m unittest test_codon_table.py
+```
+
+The tests cover the codon dictionary, DNA/RNA validation, DNA-to-RNA conversion, incomplete codons, translation, start/stop positions, GC content, and amino-acid counts.
+
+You can also try these cases manually:
 
 1. Valid DNA: `ATGGCTTTTTAA`
 2. Valid RNA: `AUGGCUUUUUAA`
@@ -100,6 +108,5 @@ This project demonstrates dictionaries, functions, loops, conditional logic, str
 ## Possible future improvements
 
 - Read sequence files in FASTA format.
-- Add unit tests with Python's `unittest` module.
 - Allow users to select alternative genetic codes.
 - Export results to a text or CSV file.
