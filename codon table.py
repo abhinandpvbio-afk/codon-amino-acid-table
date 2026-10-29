@@ -123,6 +123,8 @@ codon_table = {
     "GGG": "Glycine"
 }
 
+DNA_BASES = set("ATGC")
+RNA_BASES = set("AUGC")
 START_CODON = "AUG"
 STOP_CODONS = {"UAA", "UAG", "UGA"}
 
@@ -163,14 +165,7 @@ def display_codon_table():
 
 def validate_dna(sequence):
 
-    valid_bases = set("ATGC")
-
-    for base in sequence:
-
-        if base not in valid_bases:
-            return False
-
-    return True
+    return all(base in DNA_BASES for base in sequence)
 
 
 # ============================================================
@@ -179,14 +174,7 @@ def validate_dna(sequence):
 
 def validate_rna(sequence):
 
-    valid_bases = set("AUGC")
-
-    for base in sequence:
-
-        if base not in valid_bases:
-            return False
-
-    return True
+    return all(base in RNA_BASES for base in sequence)
 
 
 # ============================================================
