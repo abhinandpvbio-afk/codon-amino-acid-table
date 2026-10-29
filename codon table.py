@@ -537,6 +537,10 @@ def main():
 
     print(" - ".join(amino_acids))
 
+    print("\nAmino acid counts:")
+    for amino_acid, count in sorted(count_amino_acids(amino_acids).items()):
+        print(f"{amino_acid}: {count}")
+
     # --------------------------------------------------------
     # Display codon table
     # --------------------------------------------------------
