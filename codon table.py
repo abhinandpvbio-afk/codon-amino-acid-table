@@ -241,7 +241,7 @@ def count_amino_acids(amino_acids):
 # ============================================================
 
 def translate_codons(codons):
-
+    """Translate RNA codons using the standard genetic code dictionary."""
     amino_acids = []
 
     for codon in codons:
